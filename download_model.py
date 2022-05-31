@@ -1,6 +1,8 @@
 from transformers import AutoModel
 import os
 
+# Downloads models from hugging face transformers
+
 # Note: list available at https://huggingface.co/models
 # Cached models are by default stored in ~/.cache/huggingface/transformers/
 
