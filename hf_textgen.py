@@ -18,8 +18,8 @@ def list_downloads():
 
 # Simple text generation using pipeline
 def default_generation():
-    model_path = 'model-downloads/opt-350m'
-    tokenizer_path = 'facebook/opt-350m'
+    model_path = 'model-downloads/opt-1.3b'
+    tokenizer_path = 'facebook/opt-1.3b'
     output_path = os.path.join('gen-test-files', 'testing.txt')
     context_path = os.path.join('gen-test-files', 'context.txt')
 
@@ -48,8 +48,8 @@ def default_generation():
 
 
 def generate(max_output_length=256):
-    model_path = 'model-downloads/opt-350m'
-    tokenizer_path = 'facebook/opt-350m'
+    model_path = 'model-downloads/opt-1.3b'
+    tokenizer_path = 'facebook/opt-1.3b'
     output_path = os.path.join('gen-test-files', 'testing.txt')
     context_path = os.path.join('gen-test-files', 'context.txt')
 
