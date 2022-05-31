@@ -1,6 +1,6 @@
 from transformers import pipeline
 from transformers import AutoTokenizer, AutoModelForCausalLM
-from transformers import GPT2Tokenizer, OPTForCausalLM
+from transformers import GPT2Tokenizer, OPTForCausalLM, GPT2LMHeadModel
 import os
 
 # list contents of model downloads folder
@@ -10,8 +10,8 @@ def list_downloads():
     text = 'Model Downloads:\n' + '\n'.join(contents)
     print(text)
 
-if __name__ == '__main__':
-
+# Simple text generation using pipeline
+def default_generation():
     model_path = 'model-downloads/opt-350m'
     tokenizer_path = 'facebook/opt-350m'
     output_path = os.path.join('gen-test-files', 'testing.txt')
@@ -39,3 +39,42 @@ if __name__ == '__main__':
         fhand.write(output_text)
 
     print("Output text written to " + str(output_path))
+
+
+def generate(max_output_length=256):
+    model_path = 'model-downloads/opt-350m'
+    tokenizer_path = 'facebook/opt-350m'
+    output_path = os.path.join('gen-test-files', 'testing.txt')
+    context_path = os.path.join('gen-test-files', 'context.txt')
+
+    print("Loading model from " + model_path)
+
+    tokenizer = GPT2Tokenizer.from_pretrained(tokenizer_path)
+    model = OPTForCausalLM.from_pretrained(model_path, ignore_mismatched_sizes=True)
+
+    print("Model loaded.")
+
+    with open(context_path, 'r') as fhand:
+        context = fhand.read()
+
+    beam_output = model.generate(
+        tokenizer.encode(context, return_tensors='pt'),
+        max_length=max_output_length,
+        num_beams=5,
+        no_repeat_ngram_size=4,
+        early_stopping=True
+    )
+    
+    output_text = tokenizer.decode(beam_output[0], skip_special_tokens=True)
+    
+    x = tokenizer(output_text)
+    print("Num output tokens: " + str(len(x['input_ids'])))
+
+    with open(output_path, 'w') as fhand:
+        fhand.write(output_text)
+
+    print("Output text written to " + str(output_path))
+
+if __name__ == '__main__':
+    generate()
+    
