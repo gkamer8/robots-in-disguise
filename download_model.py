@@ -11,7 +11,7 @@ def download_model(model_hf_path, download_folder):
     model.save_pretrained(download_folder)
 
 if __name__ == '__main__':
-    MODEL_TO_DOWNLOAD = 'distilgpt2'
+    MODEL_TO_DOWNLOAD = 'facebook/opt-1.3b'
     MODEL_DOWNLOAD_FOLDER = 'model-downloads'
     download_folder = os.path.join(MODEL_DOWNLOAD_FOLDER, MODEL_TO_DOWNLOAD)
     download_model(MODEL_TO_DOWNLOAD, download_folder)
