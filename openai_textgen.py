@@ -1,5 +1,7 @@
 import os
-import openai 
+import openai
+
+API_KEY_FILE_PATH = 'openai_api_key.txt'
 
 def confirm_api_call():
     confirmed = input("Enter 'y' to confirm a call to GPT-3 API: ")
@@ -9,8 +11,7 @@ def confirm_api_call():
 
 if __name__ == '__main__':
 
-    api_key_file_path = os.path.join('openai_api_key.txt')
-    with open(api_key_file_path, 'r') as fhand:
+    with open(API_KEY_FILE_PATH, 'r') as fhand:
         openai.api_key = fhand.read()
 
     output_path = os.path.join('gen-test-files', 'testing.txt')

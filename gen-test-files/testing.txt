@@ -1,6 +1,22 @@
 Name: Jared Simpson
 Age: 22
+<<<<<<< HEAD
 Occupation: Harvard College Student
 
 Jared Simpson had blue eyes and blond hair, with
 brown eyebrows. He wore glasses and wore glasses when he talked. Jared was tall for his age, standing at 6 feet tall. Jared wore glasses when talking. Jared liked to play basketball and soccer. Jared liked playing basketball because Jared liked basketball because Jared loved basketball because Jared played basketball because Jared wanted to play basketball because Jared thought basketball was fun because Jared liked watching basketball because Jared watched basketball because Jared enjoyed watching basketball games because Jared liked going to basketball games because hockey games were boring because hockey games sucked because hockey sucked because hockey sucks because hockey sucks so Jared liked hockey games because hockey sucked so Jared liked NHL hockey games because NHL hockey sucked so much Jared liked NHL Hockey games because NHL Hockey sucked so much that Jared hated NHL Hockey games even though NHL Hockey sucked SO MUCH Jared liked NBA basketball games because NBA Basketball sucked SO MUCH THAT Jared hated NBA Basketball games SO MUCH that Jared wished NBA Basketball games sucked SO MUCH MORE Jared liked NBA Basketball games more than NHL Basketball games because NHL Basketball suck SO MUCH MORE than NBA Basketball games DID SO MUCH MORE TO MAKE Jared dislike NBA Basketball games MORE THAN NHL Basketball games DID NOTHING TO MAKE Jared
+=======
+Description: Harvard College student
+
+Jared Simpson had blue eyes and blond hair, with brown eyes. He was born in the Bronx, New York, but grew up in Queens, where he attended high school. His parents divorced when he was a young child, and he moved to California at age 13. After graduating from high school, he went to work as a security guard for an insurance company. In his spare time, he enjoyed playing video games and watching movies.
+
+In 2007, he began working as a driver’s license clerk at a local DMV office. At first, he didn’t know how to drive, so he started driving himself. Eventually, he learned how to drive on his own, and by 2010, he was able to get a drivers license.
+
+He graduated from college in 2011 with a bachelor’s degree in business administration. Since then, he has been working full-time as a driver's license clerk at various DMV offices around the country.
+
+When asked about his dream job, he said, “I would love to be a police officer. I have always wanted to do something like that.”
+
+Simpson is currently enrolled in graduate school at Columbia University, where he hopes to become a criminal justice professor.
+
+If you or someone you know needs help, please call the National Suicide Prevention Lifeline at 1-800-273-TALK (8255) or visit www.suicidepreventionlifeline.org. You can also text HOME to 741-741 to speak to a trained counselor.
+>>>>>>> f2daca1b4fa86ef7be8805c868c6c6461c4a00af

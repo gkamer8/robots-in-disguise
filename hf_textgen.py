@@ -47,9 +47,15 @@ def default_generation():
     print("Output text written to " + str(output_path))
 
 
+<<<<<<< HEAD
 def generate(max_output_length=256):
     model_path = 'model-downloads/opt-6.7b'
     tokenizer_path = 'facebook/opt-6.7b'
+=======
+def generate(min_output_length=256, max_output_length=512):
+    model_path = 'model-downloads/opt-350m'
+    tokenizer_path = 'facebook/opt-350m'
+>>>>>>> f2daca1b4fa86ef7be8805c868c6c6461c4a00af
     output_path = os.path.join('gen-test-files', 'testing.txt')
     context_path = os.path.join('gen-test-files', 'context.txt')
 
@@ -65,14 +71,21 @@ def generate(max_output_length=256):
 
     beam_output = model.generate(
         tokenizer.encode(context, return_tensors='pt'),
+        min_length=min_output_length,
         max_length=max_output_length,
         num_beams=4,
         no_repeat_ngram_size=4,
         early_stopping=True,
+<<<<<<< HEAD
         temperature=1,
 	repetition_penalty=3.0,
 	num_beam_groups=2,
 	diversity_penalty=0.1
+=======
+        num_beam_groups=2,
+        diversity_penalty=0.1,
+        repetition_penalty=3.0,
+>>>>>>> f2daca1b4fa86ef7be8805c868c6c6461c4a00af
     )
     
     output_text = tokenizer.decode(beam_output[0], skip_special_tokens=True)
