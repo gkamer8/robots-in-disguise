@@ -18,8 +18,8 @@ def list_downloads():
 
 # Simple text generation using pipeline
 def default_generation():
-    model_path = 'model-downloads/opt-1.3b'
-    tokenizer_path = 'facebook/opt-1.3b'
+    model_path = 'model-downloads/opt-6.7b'
+    tokenizer_path = 'facebook/opt-6.7b'
     output_path = os.path.join('gen-test-files', 'testing.txt')
     context_path = os.path.join('gen-test-files', 'context.txt')
 
@@ -48,8 +48,8 @@ def default_generation():
 
 
 def generate(max_output_length=256):
-    model_path = 'model-downloads/opt-1.3b'
-    tokenizer_path = 'facebook/opt-1.3b'
+    model_path = 'model-downloads/opt-6.7b'
+    tokenizer_path = 'facebook/opt-6.7b'
     output_path = os.path.join('gen-test-files', 'testing.txt')
     context_path = os.path.join('gen-test-files', 'context.txt')
 
@@ -66,10 +66,13 @@ def generate(max_output_length=256):
     beam_output = model.generate(
         tokenizer.encode(context, return_tensors='pt'),
         max_length=max_output_length,
-        num_beams=5,
+        num_beams=4,
         no_repeat_ngram_size=4,
         early_stopping=True,
-        temperature=.5
+        temperature=1,
+	repetition_penalty=3.0,
+	num_beam_groups=2,
+	diversity_penalty=0.1
     )
     
     output_text = tokenizer.decode(beam_output[0], skip_special_tokens=True)

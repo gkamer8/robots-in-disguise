@@ -1,3 +1,5 @@
-The following is a description of a character in a novel by William Faulkner. The character is named Jared, and he is a student at Harvard College.
+Name: Jared Simpson
+Age: 22
+Occupation: Harvard College Student
 
-Jared Simpson is
+Jared Simpson had blue eyes and blond hair, with
