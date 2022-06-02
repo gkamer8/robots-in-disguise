@@ -1,5 +1,6 @@
 Name: Jared Simpson
 Age: 22
-Description: Harvard College student
+<<<<<<< HEAD
+Occupation: Harvard College Student
 
-Jared Simpson had blue eyes and blond hair, with a tanned complexion. He was a freshman at Harvard College.
+Jared Simpson had blue eyes and blond hair, with
