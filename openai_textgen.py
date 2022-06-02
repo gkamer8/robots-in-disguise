@@ -24,8 +24,10 @@ if __name__ == '__main__':
     response = openai.Completion.create(
         engine="text-davinci-002",
         prompt=context,
-        temperature=0,
-        max_tokens=512
+        temperature=1,
+        max_tokens=1024,
+        frequency_penalty=.3,
+        presence_penalty=.3
     )
 
     output_text = response['choices'][0]['text']
